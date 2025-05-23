@@ -1,65 +1,27 @@
-def add(a, b):
-    # Perform addition and return the result
-    return a + b
-
-def subtract(x, y):
-    # Perform subtraction and return the result
-    return x - y
-
-def divide(a, b):
-    # Perform division and return the result
-    # Include a check for division by zero if necessary
+print("velkommen til minmal kallkulator")
+print("Addisjon:1, subtraksjon:2, multiplikasjon:3, divisjon:4")
+valg = int(input("Velg en operasjon: "))
+if valg ==1:
+    print("Addisjon")
+    a = int(input("Skriv inn første tall: "))
+    b = int(input("Skriv inn andre tall: "))
+    print(a + b)
+elif valg ==2:
+    print("Subtraksjon")
+    a = int(input("Skriv inn første tall: "))
+    b = int(input("Skriv inn andre tall: "))
+    print(a - b)
+elif valg ==3:
+    print("Multiplikasjon")
+    a = int(input("Skriv inn første tall: "))
+    b = int(input("Skriv inn andre tall: "))
+    print(a * b)
+elif valg ==4:
+    print("Divisjon")
+    a = int(input("Skriv inn første tall: "))
+    b = int(input("Skriv inn andre tall: "))
     if b == 0:
-        raise ValueError("Cannot divide by zero")
-    return a / b
-
-def multiply(a, b):
-    # Perform multiplication and return the result
-    return a * b
-print ("selct operaticon")
-print ("add")
-print("subtract")
-print("multiply")
-print("divide")
-def divide(x, y):
-    return x / y
-
-
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
-
-while True:
-    # take input from the user
-    choice = input("Enter choice(1/2/3/4): ")
-
-    # check if choice is one of the four options
-    if choice in ('1', '2', '3', '4'):
-        try:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-            continue
-
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
-
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-
-        elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
-        
-        # check if user wants another calculation
-        # break the while loop if answer is no
-        next_calculation = input("Let's do next calculation? (yes/no): ")
-        if next_calculation == "no":
-          break
+        print("Kan ikke dele på null")
     else:
-        print("Invalid Input")
+        print(a / b)
+print("Takk for at du brukte minmal kallkulator")
